@@ -45,10 +45,10 @@ buttonOK.addEventListener("click", function () {
     }
 
     suhuTujuan[0] == "C"
-        ? (hasil = c)
+        ? (hasil = formatDesimal(c))
         : suhuTujuan[0] == "K"
-        ? (hasil = k)
-        : (hasil = f);
+        ? (hasil = formatDesimal(k))
+        : (hasil = formatDesimal(f));
 
     teksOutput.innerHTML = `Hasil konversi dari ${nilaiAwal}° ${suhuAsal[0]} ke ${suhuTujuan[0]} adalah ${hasil}° ${suhuTujuan[0]}`;
 });
@@ -68,6 +68,11 @@ function updateSuhuTujuan() {
             (opt) => !opt.disabled
         ).value;
     }
+}
+
+function formatDesimal(angka) {
+    if (angka % 1 === 0) return angka;
+    return parseFloat(angka.toFixed(3));
 }
 
 suhuAsal.addEventListener("change", updateSuhuTujuan);

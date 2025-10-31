@@ -14,12 +14,24 @@ inputNilaiAwal.addEventListener("input", () => {
         buttonOK.disabled = true;
     } else {
         buttonOK.disabled = false;
+        teksOutput.textContent = ""; // hapus pesan jika user mulai mengetik
     }
 });
 
 buttonOK.disabled = true;
 
 buttonOK.addEventListener("click", function () {
+    if (inputNilaiAwal.value.trim() === "") {
+        teksOutput.textContent = "⚠️ Masukkan nilai suhu terlebih dahulu!";
+        teksOutput.style.color = "red";
+        clearTimeout(pesanTimeout);
+        pesanTimeout = setTimeout(() => {
+            teksOutput.textContent = "";
+            teksOutput.style.color = "";
+        }, 2000);
+        return;
+    }
+
     let suhuAsal = inputSuhuAsal.value.toUpperCase();
     let suhuTujuan = inputSuhuTujuan.value.toUpperCase();
     let nilaiAwal = parseFloat(inputNilaiAwal.value);
@@ -40,7 +52,7 @@ buttonOK.addEventListener("click", function () {
         case "F":
             f = nilaiAwal;
             c = (f - 32) * (5 / 9);
-            k = (k - 273.15) * (5 / 9) + 273.15;
+            k = (f - 32) * (5 / 9) + 273.15;
             break;
     }
 
@@ -50,6 +62,7 @@ buttonOK.addEventListener("click", function () {
         ? (hasil = k)
         : (hasil = f);
 
+    teksOutput.style.color = "#333";
     teksOutput.innerHTML = `Hasil konversi dari ${nilaiAwal}° ${suhuAsal[0]} ke ${suhuTujuan[0]} adalah ${hasil}° ${suhuTujuan[0]}`;
 });
 

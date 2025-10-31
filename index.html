@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Konversi Suhu</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Konversi Suhu</h1>
+            <div class="input-form">
+                <span>
+                    <span>Pilih suhu asal:</span>
+                    <select class="suhuAsal" name="suhuAsal">
+                        <option value="celsius">Celsius</option>
+                        <option value="fahrenheit">Fahrenheit</option>
+                        <option value="kelvin">Kelvin</option>
+                    </select>
+                </span>
+                <span>
+                    <span>Masukkan nilai:</span>
+                    <input class="nilaiAwal" type="number" name="nilaiAwal" />
+                </span>
+                <span>
+                    <span>Pilih suhu tujuan:</span>
+                    <select class="suhuTujuan" name="suhuTujuan">
+                        <option value="celsius">Celsius</option>
+                        <option value="fahrenheit">Fahrenheit</option>
+                        <option value="kelvin">Kelvin</option>
+                    </select>
+                </span>
+            </div>
+            <div class="output-box">
+                <span class="teks-output"></span>
+                <button class="buttonOK">OK!</button>
+            </div>
+            <p class="watermark">
+                © 2025 <a href="https://github.com/arfrhmn21">@arfrhmn21_</a> —
+                Konversi Suhu App
+            </p>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

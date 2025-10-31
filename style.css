@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+.container {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-form select {
+    padding: 0.6rem 0.8rem;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.input-form select:focus {
+    border-color: #5a67d8;
+    box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.2);
+}
+
+.input-form span {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.input-form span span {
+    font-weight: 500;
+    color: #333;
+}
+
+.input-form input {
+    padding: 0.6rem 0.8rem;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.input-form input:focus {
+    border-color: #5a67d8;
+    box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.2);
+}
+
+.output-box {
+    background-color: #f8f9ff;
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    font-size: 1rem;
+    color: #333;
+    display: flex;
+    justify-content: space-between; /* Biar teks di kiri dan tombol di kanan */
+    align-items: center;
+    gap: 1rem;
+}
+
+.output-box span {
+    flex: 1; /* Biar teks menyesuaikan lebar sisa ruang */
+}
+
+.output-box button {
+    background-color: #5a67d8;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.output-box button:hover {
+    background-color: #434190;
+    transform: scale(1.05);
+}
+
+.output-box button:active {
+    transform: scale(0.98);
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #4c51bf;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(76, 81, 191, 0.2);
+}
+
+.watermark {
+    text-align: center;
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.4);
+    margin-top: 0.8rem;
+    user-select: none;
+    font-style: italic;
+}
